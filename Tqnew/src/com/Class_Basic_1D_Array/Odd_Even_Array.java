@@ -3,12 +3,16 @@ package com.Class_Basic_1D_Array;
 public class Odd_Even_Array {
 
 	public static void main(String ar[]) {
-		int Num[] = { 5, 2, 11, 7, 4, 7 };
+		int Num[] = { 5, 2, 11, 6, 4, 7,13 };
 		int size = Num.length;
 		int Odd[] = new int[size];
 		int Even[] = new int[size];
+		int b[]= new int[size];
 		int e = 0;
 		int o = 0;
+		int total ;
+		int j=0;
+		int k=0;
 		System.out.println("Original Array : ");
 		for (int i = 0; i < size; i++) {
 			System.out.print(" " + Num[i]);
@@ -24,8 +28,8 @@ public class Odd_Even_Array {
 		for (int i = 0; i < e; i++) {
 			System.out.print(" " + Even[i]);
 		}
-		System.out.println();
-		System.out.println("Even count " + e);
+//		System.out.println();
+//		System.out.println("Even count " + e);
 
 		System.out.println("From Odd :");
 		for (int i = 0; i < size; i++) {
@@ -37,8 +41,10 @@ public class Odd_Even_Array {
 		for (int i = 0; i < o; i++) {
 			System.out.print(" " + Odd[i]);
 		}
-		System.out.println();
-		System.out.println("Odd count " + o);
+		
+				
+//		System.out.println();
+//		System.out.println("Odd count " + o);
 
 		// System.out.println(o);
 
