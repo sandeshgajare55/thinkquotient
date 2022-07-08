@@ -7,7 +7,7 @@ public class DBConnection {
 	public static final String url="jdbc:mysql://localhost:3306/tq_practice?"+"autoReconnect=true&useSSL=false";
 	public static final String username="root";
 	public static final String password="Shrisai12@";
-	static Connection getConnection() throws SQLException, ClassNotFoundException
+	public static Connection getConnection() throws SQLException, ClassNotFoundException
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con =DriverManager.getConnection(url,username,password);

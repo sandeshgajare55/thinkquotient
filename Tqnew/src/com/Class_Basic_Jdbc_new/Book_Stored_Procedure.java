@@ -14,23 +14,24 @@ public class Book_Stored_Procedure {
 		
 		void show_records() throws SQLException
 		{
-			String s="{Book_demo(?)}";
+			String s="{call Book_demo(?)}";
 			CallableStatement cb=con.prepareCall(s);
-			Scanner sc=new Scanner(System.in);
+			Scanner sc=new Scanner(System.in);	
 			System.out.println("Enter the Book Name : ");
 			String name=sc.next();
 			cb.setString(1, name);
-			
+			System.out.println(cb.execute());
 		   ResultSet rs=cb.executeQuery();
 		   while(rs.next())
 		   {
 			   System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+" "+rs.getInt(4));
 		   }
+		   System.out.println("-----------------------------------");
 		      cb.getMoreResults();
 		      ResultSet rs1=cb.getResultSet();
 		   while(rs1.next())
 		   {
-			   System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+" "+rs.getInt(4));
+			   System.out.println(rs1.getInt(1)+" "+rs1.getString(2)+" "+rs1.getInt(3)+" "+rs1.getInt(4));
 		   }
 		}
 
