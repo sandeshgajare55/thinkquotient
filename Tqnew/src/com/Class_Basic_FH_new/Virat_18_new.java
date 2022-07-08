@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Virat_18_new {
-	public static void main(String args[]) throws IOException
-	{
+	public static void main(String args[]) throws IOException {
 		File f = new File("D:\\viratnew.txt");
 		FileWriter fw = new FileWriter(f);
 		if (f.createNewFile()) {
@@ -24,12 +23,15 @@ public class Virat_18_new {
 			rm = myReader.nextLine();
 			System.out.println(rm);
 		}
-		
-		rm.split(" ");
-		
-			
+		String t = rm.toLowerCase();
+		String g = t.substring(0, 11);
+		System.out.println(g);
+		for (int i = 0; i <= (t.length() - g.length()); i++) {
+			if (t.substring(i, (i + g.length())).equalsIgnoreCase(g)) {
+				System.out.println(g + " is substring of main string, match found at: " + ++i);
+			}
 		}
-	}
-	
-	
 
+	}
+
+}
